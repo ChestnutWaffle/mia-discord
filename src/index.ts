@@ -14,7 +14,7 @@ const rest = new REST({ version: '10' }).setToken(env.DISCORD_TOKEN);
 
 // rest.delete(Routes.applicationCommand(env.DISCORD_CLIENT_ID, "1158703148337209395")).then(() => console.log("successfully delete command 1158703148337209395"));
 // rest.delete(Routes.applicationCommand(env.DISCORD_CLIENT_ID, "1158480699523870802")).then(() => console.log("successfully delete command 1158480699523870802"));
-rest.delete(Routes.applicationCommand(env.DISCORD_CLIENT_ID, "1166749710695010429")).then(() => console.log("successfully delete command 1166749710695010429"));
+// rest.delete(Routes.applicationCommand(env.DISCORD_CLIENT_ID, "1166749710695010429")).then(() => console.log("successfully delete command 1166749710695010429"));
 
 
 
