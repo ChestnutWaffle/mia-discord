@@ -5,6 +5,7 @@ import { GatewayDispatchEvents, GatewayIntentBits, InteractionType, MessageFlags
 
 import { env, translate } from './config';
 import { buttons_row, open_buttons_row } from './components/row';
+import { server } from './keep_alive';
 
 
 
@@ -177,7 +178,11 @@ client.on(GatewayDispatchEvents.InteractionCreate, async ({ data: interaction, a
 });
 
 // Listen for the ready event
-client.once(GatewayDispatchEvents.Ready, () => console.log('Ready!'));
+client.once(GatewayDispatchEvents.Ready, () => {
+
+  server.listen(process.env.PORT ?? 8080)
+  console.log('Ready!')
+});
 
 // Start the WebSocket connection.
 gateway.connect();
